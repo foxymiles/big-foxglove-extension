@@ -1,10 +1,10 @@
 {
   "name": "big-foxglove-extension",
   "displayName": "big-foxglove-extension",
-  "description": "",
-  "publisher": "unknown",
+  "description": "Testing big extension bundles",
+  "publisher": "foxymiles",
   "homepage": "",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "UNLICENSED",
   "main": "./dist/extension.js",
   "keywords": [],

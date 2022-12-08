@@ -2,6 +2,8 @@ import { PanelExtensionContext, RenderState, Topic, MessageEvent } from "@foxglo
 import { useLayoutEffect, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
+import bigImage from "./big_image.png";
+
 function ExamplePanel({ context }: { context: PanelExtensionContext }): JSX.Element {
   const [topics, setTopics] = useState<readonly Topic[] | undefined>();
   const [messages, setMessages] = useState<readonly MessageEvent<unknown>[] | undefined>();
@@ -61,6 +63,7 @@ function ExamplePanel({ context }: { context: PanelExtensionContext }): JSX.Elem
         <a href="https://foxglove.dev/docs/studio/extensions/getting-started">documentation</a> for
         more details on building extension panels for Foxglove Studio.
       </p>
+      <img src={bigImage} width="100%" />
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", rowGap: "0.2rem" }}>
         <b style={{ borderBottom: "1px solid" }}>Topic</b>
         <b style={{ borderBottom: "1px solid" }}>Datatype</b>
