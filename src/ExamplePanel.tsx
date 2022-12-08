@@ -2,7 +2,16 @@ import { PanelExtensionContext, RenderState, Topic, MessageEvent } from "@foxglo
 import { useLayoutEffect, useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 
-import bigImage from "./big_image.png";
+import fox1 from "./fox1.png";
+import fox2 from "./fox2.png";
+import fox3 from "./fox3.png";
+import fox4 from "./fox4.png";
+import fox5 from "./fox5.png";
+import fox6 from "./fox6.png";
+import fox7 from "./fox7.png";
+import fox8 from "./fox8.png";
+import fox9 from "./fox9.png";
+import fox10 from "./fox10.png";
 
 function ExamplePanel({ context }: { context: PanelExtensionContext }): JSX.Element {
   const [topics, setTopics] = useState<readonly Topic[] | undefined>();
@@ -56,14 +65,25 @@ function ExamplePanel({ context }: { context: PanelExtensionContext }): JSX.Elem
   }, [renderDone]);
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div style={{ padding: "1rem", overflowY: "auto", maxHeight: "100%" }}>
       <h2>Welcome to your new extension panel!</h2>
       <p>
         Check the{" "}
         <a href="https://foxglove.dev/docs/studio/extensions/getting-started">documentation</a> for
         more details on building extension panels for Foxglove Studio.
       </p>
-      <img src={bigImage} width="100%" />
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr)" }}>
+        <img src={fox1} width="100%" />
+        <img src={fox2} width="100%" />
+        <img src={fox3} width="100%" />
+        <img src={fox4} width="100%" />
+        <img src={fox5} width="100%" />
+        <img src={fox6} width="100%" />
+        <img src={fox7} width="100%" />
+        <img src={fox8} width="100%" />
+        <img src={fox9} width="100%" />
+        <img src={fox10} width="100%" />
+      </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", rowGap: "0.2rem" }}>
         <b style={{ borderBottom: "1px solid" }}>Topic</b>
         <b style={{ borderBottom: "1px solid" }}>Datatype</b>
